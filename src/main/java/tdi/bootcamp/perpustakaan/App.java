@@ -105,7 +105,7 @@ public class App
 
     //bisa mencari nama buku yg dipinjam berdasar nama peminjam (blm)
     /*
-    private static Map<String, Buku> getListBuku(Session session) {
+    private static Map<String, Buku> getListBukuHQL(Session session) {
         Map<String, Buku> listBuku =
                 (Map<String, Buku>) session.createQuery("select p from Peminjam p where p.nama = :namaKota ")
                         .setParameter("namaKota", "Anne Frank")
@@ -137,13 +137,17 @@ public class App
 
         session.flush();
         //App.updateBukuHql(session);
-        App.getBuku(session);
-        /*
+        //App.getBuku(session);
+
         Map<String,Buku> bukuMap= App.getListBuku(session);
         for (Iterator iterator = bukuMap.entrySet().iterator(); iterator.hasNext();) {
             Buku buku= (Buku) iterator.next();
             System.out.println(String.format("nama == %s", buku.getTitle()));
-        }*/
+        }
+
+
+
+
         /*Buku bukuBar = getBuku(session);
         System.out.println(bukuBar.getYangPeminjam().getNama().toString());
 
